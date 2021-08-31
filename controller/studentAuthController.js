@@ -8,17 +8,16 @@ exports.login = (req,res)=>{
 
     studentModel.findOne({email:email,password:password})
     .then(data=>{
-        if(data){
-            localStorage.setItem('login',email)
-            res.render('student',{name:data.firstName})
-        }else{
-            res.render('login',{error:'User not found check!!'})
-        }
+
+        if(data) return res.send(data)
+        else return res.send("failed")
         
+        
+    }).catch(error=>{
+        res.send(error)
     })
 }
 
 exports.logout = (req,res)=>{
-    localStorage.clear()
-    res.render("home")
+    
 }

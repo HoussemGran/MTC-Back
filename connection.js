@@ -10,4 +10,4 @@ mongoose.connect('mongodb+srv://achref:rZXqM5HK5Eb74YIY@cluster0.gkybx.mongodb.n
     });
 
 
-module.exports = mongoose;
+module.exports = mongoose;  
