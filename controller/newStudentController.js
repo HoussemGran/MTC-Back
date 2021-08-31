@@ -6,7 +6,8 @@ const studentModel = require('../model/newStudentModel')
 exports.addStudent = (req,res)=>{
     console.log(req.body)
     const newStudent = new studentModel({
-        name : req.body.name,
+        firstName : req.body.firstName,
+        lastName : req.body.lastName,
         password : req.body.password,
         email : req.body.email,
         phone : req.body.phone,
